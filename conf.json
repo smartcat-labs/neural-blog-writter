@@ -1,0 +1,20 @@
+{
+  "dataset_path":"/home/stanko/SmartCat/blog-generator/ghost-dataset-raw",
+  "model_path":"./test_models/ghost1",
+  "command":"RETRAIN",
+  "train_params":{
+    "batch_size": 200,
+    "learning_rate": 0.002,
+    "docs_in_batch": 20,
+    "epoch": 5
+  },
+  "network_params":{
+    "lstm_size": 256,
+    "num_layers":2,
+    "name":"lstm_text"
+  },
+  "generate":{
+    "output_dir":"./hoho.txt",
+    "max_generate":1000
+  }
+}
