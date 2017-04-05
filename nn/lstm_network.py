@@ -83,7 +83,7 @@ class LSTMNetwork(object):
 
             self.cost = tf.reduce_mean(
                 tf.nn.softmax_cross_entropy_with_logits(logits=self.network_output, labels=self.Y))
-            self.train_op = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
+            self.train_op = tf.train.RMSPropOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
 
     def get_metadata(self):
         """
